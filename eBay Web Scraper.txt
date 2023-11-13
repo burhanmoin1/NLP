@@ -1,0 +1,45 @@
+eBay Web Scraper
+
+This Python script scrapes eBay listings to compare prices for items in an export CSV file.
+
+Usage:
+
+1. Install dependencies
+
+- pandas
+- requests
+- beautifulsoup4
+- fake-useragent
+
+2. Update export CSV file
+
+The export.csv file should contain:
+
+- title - Title of the product to search for on eBay
+- price - The price you expect to sell each item for
+
+3. Run script
+
+python ebay_scraper.py
+
+4. Output
+
+The script will output a new CSV file found.csv containing:
+
+- title - Original title 
+- avg_price - Average eBay Buy It Now price
+- search_url - eBay search URL 
+- item_urls - List of eBay item URLs
+- price_diff - Difference between your price and eBay price
+
+The results will be sorted by price difference, allowing you to easily identify the most profitable items.
+
+Notes:
+
+- Scrapes eBay.com listings only
+- Restricted to basic title search, no advanced filters
+- eBay limits without an API key may impact results
+- Use a proxy or IP rotation if your requests get blocked
+- Do not excessively scrape eBay or use this data for commercial purposes
+
+Let me know if you have any other questions!
